@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: rgb(53, 106, 146)
+}
+
+.postcard {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.sky {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 65%;
+  background: #240a00;
+background: linear-gradient(0deg, rgba(36, 10, 0, 1) 0%, rgba(121, 44, 9, 1) 35%, rgb(171, 64, 22) 100%);
+}
+
+.sun {
+  position: absolute;
+  top: 60px;
+  right: 80px;
+  width: 80px;
+  height: 80px;
+  /* TODO: sun shape and glow */
+  background-color: hsl(9, 68%, 61%);
+  border-radius: 50%;
+  box-shadow: 0 0 40px 20px hsl(0, 30%, 54%);
+  /* TODO: sun color experiment */
+}
+
+.hills {
+  position: absolute;
+  bottom: 30%;
+  left: -10%;
+  width: 120%;
+  height: 45%;
+  /* TODO: hills shape */
+  background: radial-gradient(
+  ellipse 120% 60% at 50% 100%,
+  hsl(0, 0%, 16%),
+  hsl(0, 0%, 23%)
+  );
+  border-radius: 50% 50% 0 0 / 30% 30% 100%;
+}
+
+.water {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 32%;
+  /* TODO: water color and transparency */
+  background: linear-gradient(
+    to bottom,
+    hsla(23, 70%, 50%, 0.85),
+    hsla(23, 70%, 38%, 1)
+  );
+}
+
+.text-overlay {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-family: Georgia, serif;
+  /* TODO: text styling and shadow */
+  color: hsl(0, 0%, 100%);
+  font-size: 2rem;
+  text-shadow: 
+  2px 2px  4px rgba(0, 0, 0, 0.7),
+  0 0 20px hsl(45, 100%, 60%);
+  /* TODO: text color experiment */
+}
+
+
+.tree{
+position: absolute;
+bottom: 31%;
+right: 80%;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.tree-top {
+  border-radius: 50%;
+  background: hsl(0, 0%, 47%);
+  width: 60px;
+  height: 60px;
+}
+
+.tree-trunk {
+width: 14px;
+height: 30px;
+background-color: hsl(0, 0%, 58%);
+}
+
+.cloud--right {
+  top: 50px;
+  left: 250px;
+}
+
+.cloud-part {
+  position: absolute;
+  background-color: #272727;
+  opacity: 0.85;
+  border-radius: 50%;
+}
